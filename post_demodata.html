@@ -1,0 +1,19 @@
+<script src="js/jquery-1.11.3.min.js"></script> 
+
+<script>
+function postIt(){
+  var t= $("#postData").val();
+  console.log("Send "+t);
+  $.post($("#urlin").val(),t,function(retData){
+    $("#retData").val(retData);
+  })
+}
+
+</script>
+
+<body >
+
+<input id="urlin" type="text" value="go5.php?a=10&b=20"></input><br>
+<textarea id="postData" cols=40 rows=20></textarea><br>
+<textarea id="retData" cols=40 rows=20></textarea><br>
+<button onclick="postIt()">Отправить</button>

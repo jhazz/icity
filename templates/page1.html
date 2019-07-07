@@ -1,0 +1,32 @@
+<h1>Продукция</h1>
+{%begin element='Form' id='form1' arg1="value1" arg2='value2'%}
+  <h2>Перечень для редактирования</h2>
+
+  {%fragment id='headGroupName'%}
+    <b>{*}</b>
+  {%end%}
+
+  {%fragment id='cellGroupName'%}
+    "{*}" and '{PRODUCT_GROUP_ID/TITLE}'
+  {%end%}
+
+  {%begin element='DataGrid' id='datagrid1' path='' checks='yes'%}
+    {%column width='120px' path='SKU' fixed='yes'%}
+    {%column width='120px' path='TITLE' fixed='yes'%}
+    {%column width='220px' path='PARAMETERS' %}
+    {%column width='220px' path='PRODUCTGROUP/LINKED_PARENT_GROUP/THE_PARENT_GROUP_NAME' headFragment='headGroupName' cellFragment='cellGroupName'%}
+    {%column width='220px' path='PRODUCTGROUP/THE_PRODUCT_GROUP_NAME'%}
+    {%column width='220px' path='SECONDGROUP/PRODUCT_SECOND_GROUP_NAME'%}
+    {%column width='220px' path='THE_PRODUCT_TYPE/TYPE_NAME'%}
+
+    {%begin element='cell' forPath='TITLE'%}<b>{%put element='Field'%}</b>{%end%}
+    {%begin element='cell' forPath='PARAMETERS'%}
+      {%begin element='DataGrid' id='datagrid1para'%}
+        {%column width='80px' path='PRODUCT_PARAMETER_ID'%}
+        {%column width='80px' path='PARAMETER_VALUE'%}
+      {%end%}
+    {%end%}
+  {%end%}
+  <div><button >Отмена</button></div>
+  Конец списка
+{%end%}

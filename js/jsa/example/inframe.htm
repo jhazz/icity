@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:jsa="JSA">
+<head>
+<meta charset="utf-8"/>
+<style>
+	td,body {font-family:arial; font-size:10px;}
+	folderPanel {font-size:10px;border:solid 1px; }
+	.topmenu{background-color:black; width:100%; height:20px;vertical-align:baseline;}
+	.topmenu a{color:white;}
+</style>
+<script src="../src/FX.js"></script>
+<script>
+/*global jsa, jsf */
+function showSettings(){
+	var sp=document.getElementById('panelSettings');
+	sp.style.display=(sp.style.display!='none')?'none':'block';
+}
+
+var inframe1;
+var jsat;
+function onload(){
+    jsat=setInterval(function () {
+	jsa = window.top.jsa;
+	if ( !! jsa) {
+		clearInterval(jsat);
+		inframe1 = jsa.registerFrame(window, 'inframe1');
+		FX.init();
+	}
+}, 1000);
+}
+</script>
+
+</head>
+<body style="margin:0; padding:0;" onload="onload();">
+<div id='panelSettings' style='display:none; z-index:100;position:absolute; top:20px; left:20px;background-color:#f0f0f0'>
+<table cellpadding=5 >
+	<tr valign='top'>
+		<td>Путь к флэшке (FlashInbox):
+		<br/><input type="text" size="40" id="pathFlashInbox" value="C:/progs/hta2/flash"/></td>
+		<td>&lt;&lt;</td>
+		<td>Путь к серверной папке (ServerInbox):
+		<br/><input type="text" size="40" id="pathServerInbox" value="C:/progs/hta2/server"/></td>
+	</tr>
+</table>
+</div>
+
+</body>
+</html>

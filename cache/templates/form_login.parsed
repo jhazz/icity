@@ -1,0 +1,27 @@
+a:19:{i:0;s:325:"<!DOCTYPE html>
+<html>
+    <head>
+        <title>Пожалуйста укажите свой логин и пароль</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div style='text-align: center;'>
+            ";i:1;a:2:{s:3:"tag";s:5:"begin";s:6:"params";a:2:{s:7:"element";s:17:"doq\elements\Form";s:2:"id";s:5:"form1";}}i:2;s:14:"
+            ";i:3;a:2:{s:3:"tag";s:4:"slot";s:6:"params";a:1:{s:2:"id";s:15:"LoginInvitation";}}i:4;s:58:"
+            <table border="1">
+                <tr><td>";i:5;a:2:{s:3:"tag";s:8:"localize";s:6:"params";a:1:{s:4:"text";s:5:"Login";}}i:6;s:31:"</td>
+                    <td>";i:7;a:2:{s:3:"tag";s:3:"put";s:6:"params";a:4:{s:7:"element";s:23:"doq\elements\InputField";s:4:"type";s:4:"line";s:5:"width";s:3:"100";s:6:"bindTo";s:17:"form1\login_field";}}i:8;s:54:"</td>
+                </tr>
+                <tr><td>";i:9;a:2:{s:3:"tag";s:8:"localize";s:6:"params";a:1:{s:4:"text";s:8:"Password";}}i:10;s:32:"|</td>
+                    <td>";i:11;a:2:{s:3:"tag";s:3:"put";s:6:"params";a:4:{s:7:"element";s:23:"doq\elements\InputField";s:4:"type";s:4:"pass";s:5:"width";s:3:"100";s:6:"bindTo";s:16:"form1\pass_field";}}i:12;s:91:"</td>
+                </tr>
+                <tr><td></td><td><input type="submit" value='";i:13;a:2:{s:3:"tag";s:8:"localize";s:6:"params";a:1:{s:4:"text";s:4:"Send";}}i:14;s:91:"'/></td></tr>
+            </table>
+            <div style='width:20%;'>
+                ";i:15;a:2:{s:3:"tag";s:3:"put";s:6:"params";a:2:{s:7:"element";s:17:"doq\elements\Hint";s:6:"bindTo";s:16:"form1\dialogText";}}i:16;s:30:"
+            </div>
+        ";i:17;a:2:{s:3:"tag";s:3:"end";s:6:"params";a:1:{s:7:"element";s:17:"doq\elements\Form";}}i:18;s:38:"
+        </div>
+    </body>
+</html>";}

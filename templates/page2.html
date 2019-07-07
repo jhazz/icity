@@ -1,0 +1,24 @@
+[form1 - before]
+{{begin element='Form' id='form1' arg1="value1" arg2='value2'}}
+  [form1 - inside]
+  
+  {{fragment id='headGroupName'}}
+    <b>{*}</b>
+  {{end}}
+
+  {{fragment id='cellGroupName'}}
+    "{*}" and '{PRODUCT_GROUP_ID/TITLE}'
+  {{end}}
+  
+  {{begin element='DataGrid' id='datagrid1' path='' checks='yes'}}
+    {{column width='120px' path='SKU' fixed='yes'}}
+    {{column width='120px' path='TITLE' fixed='yes'}}
+    {{column width='220px' path='PRODUCTGROUP/LINKED_PRODUCT_GROUP_NAME' headFragment='headGroupName' cellFragment='cellGroupName'}}
+    {{column width='220px' path='PRODUCTGROUP/THE_PRODUCT_GROUP_NAME'}}
+    {{column width='220px' path='SECONDGROUP/PRODUCT_SECOND_GROUP_NAME'}}
+    {{begin element='cell' forPath='TITLE'}}<b>{{put element='Field'}}</b>{{end}}
+    [YOU SHOULD NOT SEE IT!!! datagrid1 - inside]
+  {{end}}
+  [datagrid1 - after]
+{{end}}
+[form1 - after]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Пожалуйста укажите свой логин и пароль</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div style='text-align: center;'>
+            {{begin element='doq\elements\Form' id='form1'}}
+            {{slot id='LoginInvitation'}}
+            <table border="1">
+                <tr><td>{{localize text="Login"}}</td>
+                    <td>{{put element='doq\elements\InputField' type='line' width='100' bindTo='form1\login_field'}}</td>
+                </tr>
+                <tr><td>{{localize text="Password"}}|</td>
+                    <td>{{put element='doq\elements\InputField' type='pass' width='100' bindTo='form1\pass_field'}}</td>
+                </tr>
+                <tr><td></td><td><input type="submit" value='{{localize text="Send"}}'/></td></tr>
+            </table>
+            <div style='width:20%;'>
+                {{put element='doq\elements\Hint' bindTo='form1\dialogText'}}
+            </div>
+        {{end element='doq\elements\Form'}}
+        </div>
+    </body>
+</html>
